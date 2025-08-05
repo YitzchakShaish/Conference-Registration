@@ -3,14 +3,22 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>טופס רישום לכנס</title>
+    <title> טופס רישום לכנס</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
+<header>
+    <h1 id="hi">  טופס רישום לכנס</h1>
+    
+
+</header>
+
 <body>
-    <h1>טופס רישום לכנס</h1>
+    <img src="11.png" alt="סדנת מחשבים עם משתתפים מגוונים יושבים סביב שולחן עם מחשבים ניידים, מקשיבים למנחה מחויך שמציג על מסך גדול דימוי גרפי של מוח עם הכיתוב AI. האווירה מקצועית, מוארת ונעימה.">
     <form action="/submit" method="post">
         <fieldset>
-            <legend>פרטי משתתף</legend>
+            <legend class="pratim">פרטי משתתף</legend>
             <label for="name">שם:</label>
             <input type="text" id="name" name="name" minlength="2" autocomplete="name" required /><br /><br />
 
@@ -22,7 +30,7 @@
         </fieldset>
 
         <fieldset>
-            <legend>פרטי כרטיס</legend>
+            <legend class="pratim">פרטי כרטיס</legend>
             <label>
                 <p>סוג כרטיס:</p>
             </label>
@@ -45,7 +53,7 @@
         </fieldset>
 
         <fieldset>
-            <legend>פרטי תשלום</legend>
+            <legend class="pratim">פרטי תשלום</legend>
             <label for="cardNumber">מספר אשראי</label>
             <input type="text" id="cardNumber" name="cardNumber" inputmode="numeric" pattern="[\d ]{13,19}" required
                 autocomplete="cc-number" />
@@ -63,9 +71,9 @@
 
         <fieldset>
             <legend>הוסף כאן הערות שלך לקראת הכנס :)</legend>
-        <label for="message">הודעה:</label><br />
-        <textarea id="message" name="message" rows="4"></textarea><br /><br />
-</fieldset>
+            <label for="message">הודעה:</label><br />
+            <textarea id="message" name="message" rows="4"></textarea><br /><br />
+        </fieldset>
         <input type="submit" value="שלח" />
     </form>
 </body>
