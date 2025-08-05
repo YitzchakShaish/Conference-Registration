@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>טופס רישום לכנס</title>
+</head>
+
+<body>
+    <h1>טופס רישום לכנס</h1>
+    <form action="/submit" method="post">
+        <fieldset>
+            <legend>פרטי משתתף</legend>
+            <label for="name">שם:</label>
+            <input type="text" id="name" name="name" minlength="2" autocomplete="name" required /><br /><br />
+
+            <label for="tel"> טלפון: </label>
+            <input type="tel" id="tel" name="tel" pattern="\d{9,10}" required /><br /><br />
+
+            <label for="email">דוא"ל:</label>
+            <input type="email" id="email" name="email" autocomplete="email" required /><br /><br />
+        </fieldset>
+
+        <fieldset>
+            <legend>פרטי כרטיס</legend>
+            <label>
+                <p>סוג כרטיס:</p>
+            </label>
+            <select name="cardtype" id="cardtype">
+                <option value="vip">VIP</option>
+                <option value="standard">רגיל</option>
+                <option value="student">סטודנט</option>
+            </select><br /><br />
+
+            <p>סדנאות:</p>
+            <label><input type="checkbox" name="sadna" value="WebPerformance" />ביצועי אינטרנט</label>
+            <label><input type="checkbox" name="sadna" value="Accessibility" />נגישות</label>
+            <label><input type="checkbox" name="sadna" value="Testing" />בדיקות</label>
+            <br /><br />
+            <p>כשרות האוכל: </p>
+            <label><input type="radio" name="food" value="lando" />לנדא</label>
+            <label><input type="radio" name="food" value="badaz" />בדץ</label>
+            <label><input type="radio" name="food" value="mahpood" />מחפוד</label>
+            <br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>פרטי תשלום</legend>
+            <label for="cardNumber">מספר אשראי</label>
+            <input type="text" id="cardNumber" name="cardNumber" inputmode="numeric" pattern="[\d ]{13,19}" required
+                autocomplete="cc-number" />
+            <label for="validity">תוקף</label>
+            <input type="month" id="validity" name="validity" required autocomplete="cc-exp" min="2025-08" />
+
+
+            <label for="cvv">CVV</label>
+            <input type="password" id="cvv" name="cvv" inputmode="numeric" pattern="\d{3,4}" required
+                autocomplete="cc-csc" />
+
+            <br><br>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>הוסף כאן הערות שלך לקראת הכנס :)</legend>
+        <label for="message">הודעה:</label><br />
+        <textarea id="message" name="message" rows="4"></textarea><br /><br />
+</fieldset>
+        <input type="submit" value="שלח" />
+    </form>
+</body>
+
+<footer>
+    <p>© 2025 כל הזכויות שמורות</p>
+    <p>במידה ויהיה שינוי בהזמנות או בכנס נעדכן אותכם..</p>
+</footer>
+
+</html>
